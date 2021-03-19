@@ -7,12 +7,14 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "link": "react-native link"
   },
   "dependencies": {
     "react": "17.0.1",
     "react-native": "0.64.0",
     "react-native-paper": "^4.7.2",
+    "react-native-svg": "^12.1.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

@@ -1,10 +1,19 @@
 import React from 'react';
+import {SvgXml} from 'react-native-svg';
 
-import {RestaurantCard, RestaurantCardCover, Title} from './styles';
+import {
+  RestaurantCard,
+  RestaurantCardCover,
+  Info,
+  Adress,
+  Title,
+} from './styles';
+
+import star from '../../../../../assets/icons/star';
 
 export const RestaurantInfoCard = () => {
   const restaurant = {
-    name: 'Some Restaurant',
+    name: 'Some Restaurant 1',
     icon: 'ICON',
     photos: [
       'https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg',
@@ -18,7 +27,11 @@ export const RestaurantInfoCard = () => {
   return (
     <RestaurantCard>
       <RestaurantCardCover source={{uri: restaurant.photos[0]}} />
-      <Title>{restaurant.name}</Title>
+      <Info>
+        <Title>{restaurant.name}</Title>
+        <SvgXml xml={star} width={20} height={20} />
+        <Adress>{restaurant.address}</Adress>
+      </Info>
     </RestaurantCard>
   );
 };
